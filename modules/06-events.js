@@ -1,5 +1,8 @@
 // Events exist both in the browser, and in node. We can use events to handle
 // asynchronous actions, much like callbacks.
+//
+// If any of this is unfamiliar, revisit the Event Emitter slides from class:
+// https://github.com/wbobeirne/nycda-modules/blob/master/modules-5-2/node-js-event-emitter.pdf
 
 const CoffeeShop = require("./06/coffee-shop");
 
