@@ -27,7 +27,11 @@
 		divide(100, 0) -> 0
 */
 function divide(number, divisor) {
-	// ***** ONLY EDIT IN HERE ***** //
+	if (divisor === 0) {
+		return 0;
+	}
+
+	return number / divisor;
 }
 
 /*
@@ -50,7 +54,15 @@ function divide(number, divisor) {
 		checkPasscodes("open", "sesame") -> "Welcome"
 */
 function checkPasscodes(word1, word2) {
-	// ***** ONLY EDIT IN HERE ***** //
+	if (word1 === "open" && word2 === "sesame") {
+		return "Welcome";
+	}
+	else if (word1 === "open" || word2 === "sesame") {
+		return "Almost";
+	}
+	else {
+		return "Wrong";
+	}
 }
 
 /*
@@ -74,7 +86,19 @@ function checkPasscodes(word1, word2) {
 	  getGreeting() -> "Hello"
 */
 function getGreeting(hour) {
-	// ***** ONLY EDIT IN HERE ***** //
+	if (!hour && hour !== 0) {
+		return "Hello";
+	}
+
+	if (hour < 12) {
+		return "Good morning";
+	}
+	else if (hour < 18) {
+		return "Good afternoon";
+	}
+	else {
+		return "Good evening";
+	}
 }
 
 

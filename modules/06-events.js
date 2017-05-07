@@ -42,9 +42,21 @@ const CoffeeShop = require("./06/coffee-shop");
 */
 
 module.exports = function(order, paymentMethod) {
-	// ***** START EDITING HERE ***** //
+	// Bind your events first
+	CoffeeShop.on("order-taken", function() {
+		CoffeeShop.takePayment(paymentMethod);
+	});
 
-	// ***** STOP EDITING HERE ***** //
+	CoffeeShop.on("order-paid", function() {
+		CoffeeShop.makeCoffee();
+	});
+
+	CoffeeShop.on("coffee-made", function() {
+		CoffeeShop.serveCoffee();
+	});
+
+	// Then kick off the order process
+	CoffeeShop.takeOrder(order);
 
 	return CoffeeShop;
 };

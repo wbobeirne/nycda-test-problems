@@ -19,7 +19,13 @@
 		sumNumbers([1]) -> 1
 */
 function sumNumbers(inArray) {
-	// ***** ONLY EDIT IN HERE ***** //
+	let sum = 0;
+
+	for (let i = 0; i < inArray.length; i++) {
+		sum += inArray[i];
+	}
+
+	return sum;
 }
 
 
@@ -40,7 +46,17 @@ function sumNumbers(inArray) {
 	sumNumbers([2, 4, 6]) -> []
 */
 function onlyOdds(inArray) {
-	// ***** ONLY EDIT IN HERE ***** //
+	const odds = [];
+
+	for (var i = 0; i < inArray.length; i++) {
+		// Covers both 1 AND -1 for negative numbers
+		// -1 is a truthy value
+		if (inArray[i] % 2) {
+			odds.push(inArray[i]);
+		}
+	}
+
+	return odds;
 }
 
 
@@ -63,7 +79,13 @@ function onlyOdds(inArray) {
 	makeRange(7, 5) -> []
 */
 function makeRange(lower, upper) {
-	// ***** ONLY EDIT IN HERE ***** //
+	const range = [];
+
+	for (let i = lower; i < upper + 1; i++) {
+		range.push(i);
+	}
+
+	return range;
 }
 
 

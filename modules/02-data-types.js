@@ -11,10 +11,10 @@
 
 module.exports = {
 	// ***** START EDITING HERE ***** //
-	string: null,
-	number: null,
-	boolean: null,
-	array: null,
-	object: null,
+	string: "string",
+	number: 123,
+	boolean: false,
+	array: [1, 2, 3],
+	object: { property: "value" },
 	// ***** STOP EDITING HERE ***** //
 };

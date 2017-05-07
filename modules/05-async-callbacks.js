@@ -21,7 +21,12 @@
 	Output: none (just fires callback)
 */
 function runAfter(ms, cb) {
-	// ***** ONLY EDIT IN HERE ***** //
+	setTimeout(function() {
+		cb();
+	}, ms);
+
+	// Alternatively, you could do
+	// setTimeout(cb, ms);
 }
 
 
@@ -42,7 +47,14 @@ function runAfter(ms, cb) {
 	Output: none (just fires callback)
 */
 function brewTea(type, cb) {
-	// ***** ONLY EDIT IN HERE ***** //
+	if (type !== "Green" && type !== "Oolong") {
+		cb(new Error(type + "is not available"));
+		return;
+	}
+
+	setTimeout(function() {
+		cb(null, { type: type, hot: true });
+	}, 1000);
 }
 
 

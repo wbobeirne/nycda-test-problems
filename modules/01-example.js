@@ -2,4 +2,6 @@
 // export a variable that has the value "hello". Simply assign a variable to
 // "hello", module.exports the variable, and re-run the test!
 
-// module.exports = "yourVariableHere";
+const myVar = "hello";
+
+module.exports = myVar;
