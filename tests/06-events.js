@@ -1,4 +1,5 @@
 const describe = require("mocha").describe;
+const before = require("mocha").before;
 const it = require("mocha").it;
 const expect = require("chai").expect;
 
@@ -9,7 +10,11 @@ module.exports = function() {
 		describe("CoffeeShop |", function() {
 			const order = "macchiato";
 			const method = "cash";
-			const cs = start(order, method);
+			let cs;
+
+			before(function() {
+				cs = start(order, method);
+			});
 
 			it("Should be taking an order immediately", function(done) {
 				setTimeout(function() {
